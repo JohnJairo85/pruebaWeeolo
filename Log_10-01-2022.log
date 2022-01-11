@@ -1,0 +1,140 @@
+
+ 2022-01-10 14:40:45,555 [12] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:40:49,098 [12] ERROR InfoAppender [(null)] - Error Method - UpdateProperty - 
+System.Exception: Property Not Exists whit id 0
+
+ 2022-01-10 14:40:49,300 [12] ERROR InfoAppender [(null)] - Error Service - SaveProperty - 
+System.Exception: Property Not Exists
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.UpdateProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 65
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.SaveProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 42
+   at Weelo.Property.API.Controllers.PropertyController.SaveProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyController.cs:line 45
+
+ 2022-01-10 14:43:42,010 [16] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:43:42,109 [16] ERROR InfoAppender [(null)] - Error Method - UpdateProperty - 
+System.Exception: Property Not Exists whit id 0
+
+ 2022-01-10 14:43:42,197 [16] ERROR InfoAppender [(null)] - Error Service - SaveProperty - 
+System.Exception: Property Not Exists
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.UpdateProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 65
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.SaveProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 42
+   at Weelo.Property.API.Controllers.PropertyController.SaveProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyController.cs:line 45
+
+ 2022-01-10 14:44:56,659 [20] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:45:58,293 [4] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:50:51,068 [17] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:52:54,536 [23] INFO  InfoAppender [(null)] - Validate Exists id Owner 1
+
+ 2022-01-10 14:59:08,939 [13] ERROR InfoAppender [(null)] - Error Method - UpdateProperty - 
+System.Exception: Property Not Exists whit id 4
+
+ 2022-01-10 14:59:09,186 [13] ERROR InfoAppender [(null)] - Error Service - UpdatePropertyPrice - 
+System.Exception: Property Not Exists
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.UpdateProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 65
+   at Weelo.Property.API.Controllers.PropertyController.UpdatePropertyPrice(Int32 idProperty, Decimal price) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyController.cs:line 107
+
+ 2022-01-10 14:59:17,578 [13] INFO  InfoAppender [(null)] - Id Property 2 - Name : OldValue: Property 127 - NewValue: 
+
+ 2022-01-10 14:59:18,229 [13] ERROR InfoAppender [(null)] - Error Service - UpdatePropertyPrice - 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'EAI_EventServiceBusWorkQueue.dbo.Property'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:55b3f844-319e-4503-8aac-0457968e4393
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Weelo.Property.Data.Repositories.Implementation.GenericRepository`1.Update(TEntity entity) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Data\Repositories\Implementation\GenericRepository.cs:line 74
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.UpdateProperty(PropertyDTO propertyDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyServices.cs:line 88
+   at Weelo.Property.API.Controllers.PropertyController.UpdatePropertyPrice(Int32 idProperty, Decimal price) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyController.cs:line 107
+
+ 2022-01-10 15:00:02,913 [19] INFO  InfoAppender [(null)] - Id Property 2 - Name : OldValue: Property 127 - NewValue: 
+
+ 2022-01-10 15:00:50,643 [19] ERROR InfoAppender [(null)] - Error Service - UpdatePropertyPrice - 
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Address', table 'EAI_EventServiceBusWorkQueue.dbo.Property'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at Microsoft.Data.SqlClient.SqlDataReader.get_MetaData()
+   at Microsoft.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString, Boolean isInternal, Boolean forDescribeParameterEncryption, Boolean shouldCacheForAlwaysEncrypted)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean isAsync, Int32 timeout, Task& task, Boolean asyncWrite, Boolean inRetry, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+ClientConnectionId:55b3f844-319e-4503-8aac-0457968e4393
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(DbContext _, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges()
+   at Weelo.Property.Data.Repositories.Implementation.GenericRepository`1.Update(TEntity entity) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Data\Repositories\Implementation\GenericRepository.cs:line 74
+   at Weelo.Property.Business.Services.Implementation.PropertyServices.UpdateProperty(PropertyDTO propertyDTO)
+   at Weelo.Property.API.Controllers.PropertyController.UpdatePropertyPrice(Int32 idProperty, Decimal price) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyController.cs:line 107
+
+ 2022-01-10 18:37:17,067 [23] INFO  InfoAppender [(null)] - Validate Exists id Property 1
+
+ 2022-01-10 18:37:21,261 [23] ERROR InfoAppender [(null)] - Error Service - SavePropertyImage - 
+System.Exception: Property Not Exists
+   at Weelo.Property.API.Controllers.PropertyImageController.SavePropertyImage(PropertyImageDTO propertyImageDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyImageController.cs:line 45
+
+ 2022-01-10 18:38:02,785 [27] INFO  InfoAppender [(null)] - Validate Exists id Property 1
+
+ 2022-01-10 18:38:03,154 [27] ERROR InfoAppender [(null)] - Error Service - SavePropertyImage - 
+System.Exception: Property Not Exists
+   at Weelo.Property.API.Controllers.PropertyImageController.SavePropertyImage(PropertyImageDTO propertyImageDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.API\Controllers\PropertyImageController.cs:line 45
+
+ 2022-01-10 19:07:42,780 [10] INFO  InfoAppender [(null)] - Validate Exists id Property 1
+
+ 2022-01-10 19:11:28,519 [10] ERROR InfoAppender [(null)] - Error Method - SavePropertyImage - 
+System.Exception: File Not Exists in the path?\\LAUSP-W10DEV082\Users\JJRODRI\Desktop\archivos ejemplos\MicrosoftTeams-image (5).png
+
+ 2022-01-10 19:11:28,601 [10] ERROR InfoAppender [(null)] - Error Service - SavePropertyImage - 
+System.Exception: File Not Exists in the path
+   at Weelo.Property.Business.Services.Implementation.PropertyImageService.SavePropertyImage(PropertyImageDTO propertyImageDTO) in C:\Users\JJRODRI\source\repos\Weelo.Property\Weelo.Property.Business\Services\Implementation\PropertyImageService.cs:line 33
+   at Weelo.Property.API.Controllers.PropertyImageController.SavePropertyImage(PropertyImageDTO propertyImageDTO)
+
+ 2022-01-10 19:12:14,046 [4] INFO  InfoAppender [(null)] - Validate Exists id Property 1
+
+ 2022-01-10 19:25:29,090 [8] INFO  InfoAppender [(null)] - Validate Exists id Property 1
+
+ 2022-01-10 19:27:35,136 [14] INFO  InfoAppender [(null)] - Validate Exists id Property 1
